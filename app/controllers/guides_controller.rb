@@ -8,6 +8,10 @@ class GuidesController < ApplicationController
       @guides = Guide.where(destination_id: @destination_id)
     else
       @guides = Guide.all
+      respond_to do |f|
+        f.html
+        f.json {render json: @guides}
+      end
     end
   end
 
