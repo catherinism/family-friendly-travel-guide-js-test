@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col-md-6">
+
+    <h1>Edit Rating</h1>
+
+  <%= form_for([@guide, @rating]) do |f| %>
+
+  <%= f.label "Rating (5 being best):" %>
+  <%= f.select :value, (1..5) %>
+  <%= f.submit "Submit Rating" %>
+
+  <% end %>
+
+    </div>
+
+  <div class="col-md-6">
+
+    <%= image_tag "kid.jpg", size: "456x684" %>
+
+  </div>
+
+    </div>

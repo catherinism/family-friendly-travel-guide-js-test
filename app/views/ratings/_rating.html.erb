@@ -1,0 +1,7 @@
+<%= rating.value %>
+by: <%= rating.user.name %>
+
+<% if rating.user_id == current_user.id %>
+<%= link_to "Edit", edit_guide_rating_path(rating.guide, rating) %>
+<%= link_to "Delete", guide_rating_path(rating.guide, rating), method: :delete %>
+<% end %>

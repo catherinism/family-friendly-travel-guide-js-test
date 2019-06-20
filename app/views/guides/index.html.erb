@@ -1,0 +1,13 @@
+<hr class="my-4">
+
+      <% @guides.each do |guide| %>
+
+      <div class="col-md-4">
+
+        <%# <%= link_to image_tag(guide.image, style: 'width:350px'), guide_path(guide) %> %>
+        <h2 class="guide-title"> <%= link_to guide.title, guide_path(guide) %></h2>
+        <p class="guide-destination"><%= guide.destination.location %> </p>
+
+    </div>
+
+    <% end %>
